@@ -1,40 +1,31 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Question and Answer Application
+
+This is a Question and Answer application where users can log in with their email, obtain an authentication token, and use this token to perform CRUD (Create, Read, Update, Delete) operations on questions.
+
+## Features
+
+- User authentication with email
+- Token-based authentication system
+- CRUD operations on questions (GET, POST, PUT, DELETE)
+- Built with Next.js for server-rendered React applications
+- Styled using SASS and TailwindCSS for modern UI design
+
+## Technologies Used
+
+- [Next.js](https://nextjs.org/): A React framework for server-rendered applications.
+- [SASS](https://sass-lang.com/): A CSS extension language that adds features like variables, mixins, and nesting.
+- [TailwindCSS](https://tailwindcss.com/): A utility-first CSS framework for building custom designs without writing CSS.
 
 ## Getting Started
 
-First, run the development server:
+To run the application locally, follow these steps:
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+1. Clone this repository:
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+   ```bash
+   git clone <git@github.com:CodeBstack/myqt-app.git>
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
+   cd question-and-answer-app
+   
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
-
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
