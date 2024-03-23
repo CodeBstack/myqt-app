@@ -47,9 +47,9 @@ export default function Home() {
       <Head>
         <title>My QT App - Login Page</title>
       </Head>
-      <main className="w-full max-w-[30rem] mx-auto" >
+      <main className="px-4 md:px-0 w-full max-w-[30rem] mx-auto min-h-[60vh] flex flex-col itemscenter justify-center" >
         <div className="flex items-center justify-between my-8">
-          <h1 className="flex gap-4 text-3xl items-center text-black font-semibold">
+          <h1 className="flex gap-4 text-2xl md:text-3xl items-center text-black font-semibold">
             Get Token Page
           </h1>
         </div>

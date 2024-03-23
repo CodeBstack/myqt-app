@@ -34,7 +34,7 @@ const Questions = () => {
             <Head>
                 <title>My QT App - Questions Page</title>
             </Head>
-            <div className="mt-6 w-full max-w-[40rem] mx-auto">
+            <div className="mt-6 mb-10 px-5 w-full max-w-[40rem] mx-auto">
                 <div className="w-full">
                     <QuestionsTab authToken={authToken} />
                 </div>
