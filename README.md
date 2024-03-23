@@ -24,8 +24,27 @@ To run the application locally, follow these steps:
 
    ```bash
    git clone <git@github.com:CodeBstack/myqt-app.git>
+   
+   cd myqt-app
 
-   cd question-and-answer-app
+2. Install Dependencies:
+
+   ```bash
+
+   npm install
+   # or
+   yarn install
+
+3. Start the application:
+
+   ```bash
+   npm run dev
+   # or
+   yarn dev
+
+   Open http://localhost:3000 in your browser to view the application
+
+
    
 
 
