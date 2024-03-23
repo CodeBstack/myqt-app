@@ -26,6 +26,8 @@ To run the application locally, follow these steps:
    git clone <git@github.com:CodeBstack/myqt-app.git>
 
    cd question-and-answer-app
+
+   
    
 
 
