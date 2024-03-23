@@ -286,7 +286,7 @@ const AnswerBox = ({
 }) => {
 
     return (
-        <div className="p-30 bg-[#F4F4F4] rounded-[20px] mb-6">
+        <div className="p-30 rounded-[20px] mb-6">
             <div className="flex items-center justify-between mb-8">
                 <span className="flex gap-4 items-center text-neutral-07 font-semibold text-xl">
                     <svg width="35" height="35" viewBox="0 0 35 35" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -341,10 +341,13 @@ const AnswerBox = ({
                 </div>
 
                 {options?.map((option, i) =>
-                    <div key={option?.id} className="p-[20px] rounded-[20px] flex items-center gap-x-2 bg-white">
+                    <div key={option?.id} className="p-[20px] rounded-[20px] flex itemscenter gap-x-2 bg-white">
                         <BookIcon />
 
-                        <p className="text-neutral-04 text-sm font-semibold">Ans {i + 1}. {option?.charAt(0)?.toUpperCase() + option.slice(1)}.</p>
+                        <p className="text-neutral-04 text-sm font-medium flex gap-2 itemscenter">
+                            <span className="flex itemscenter min-w-fit font-semibold"> Ans {i + 1}.</span>
+                            <span> {option?.charAt(0)?.toUpperCase() + option.slice(1)}.</span>
+                        </p>
                     </div>
                 )}
 
