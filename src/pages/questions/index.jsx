@@ -5,6 +5,7 @@ import ValidatedTextAreaField from "@/components/ValidatedTextAreaField";
 import Button from "@/components/Button";
 import axios from "axios";
 import { useRouter } from "next/router";
+import Head from "next/head";
 
 
 const Questions = () => {
@@ -29,22 +30,27 @@ const Questions = () => {
     }, [token]);
 
     return (
-        <div className="mt-6 w-full max-w-[40rem] mx-auto">
-            <div className="w-full">
-                <QuestionsTab authToken={authToken} />
-            </div>
+        <>
+            <Head>
+                <title>My QT App - Questions Page</title>
+            </Head>
+            <div className="mt-6 w-full max-w-[40rem] mx-auto">
+                <div className="w-full">
+                    <QuestionsTab authToken={authToken} />
+                </div>
 
-            <Button
-                title={"Logout"}
-                bg="bg-red-500"
-                handleClick={() => {
-                    if (typeof window !== 'undefined') {
-                        localStorage.removeItem("token");
-                    }
-                    router.push("/")
-                }}
-            />
-        </div>
+                <Button
+                    title={"Logout"}
+                    bg="bg-red-500"
+                    handleClick={() => {
+                        if (typeof window !== 'undefined') {
+                            localStorage.removeItem("token");
+                        }
+                        router.push("/")
+                    }}
+                />
+            </div>
+        </>
     )
 };
 
@@ -229,7 +235,7 @@ const QuestionsTab = ({ authToken }) => {
                         name={"answer_3"}
                         label="Answer 3"
                     />
-                    
+
                     <Button
                         type="submit"
                         variant="contained"
