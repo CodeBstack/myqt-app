@@ -1,3 +1,4 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 import { useEffect, useMemo, useRef, useState } from "react";
 import { FormProvider, useForm } from "react-hook-form";
 import ValidatedInput from "@/components/ValidatedInput";
@@ -22,7 +23,7 @@ const Questions = () => {
                 setToken(JSON.parse(item))
             }
         }
-    }, [])
+    }, [router])
 
     // memoize token value so it doesn't clear on re render of this function component
     const authToken = useMemo(() => {
@@ -35,7 +36,7 @@ const Questions = () => {
                 <title>My QT App - Questions Page</title>
             </Head>
             <div className="mt-6 mb-10 px-5 w-full max-w-[40rem] mx-auto">
-                <div className="w-full">
+                <div className="w-full mb-6">
                     <QuestionsTab authToken={authToken} />
                 </div>
 
@@ -45,6 +46,7 @@ const Questions = () => {
                     handleClick={() => {
                         if (typeof window !== 'undefined') {
                             localStorage.removeItem("token");
+                            setToken(null)
                         }
                         router.push("/")
                     }}
@@ -254,7 +256,7 @@ const QuestionsTab = ({ authToken }) => {
 
             <div className="mt-12">
                 {isLoadingQuestions
-                    ? <p className="py-10 text-gray-800 font-semibold">Loading...</p>
+                    ? <p className="py-10 text-gray-600 text-center text-lg font-semibold">Loading...</p>
                     : arrayOfObjects?.map((answer, index) => (
                         <AnswerBox
                             key={answer?.id}
@@ -342,7 +344,9 @@ const AnswerBox = ({
 
                 {options?.map((option, i) =>
                     <div key={option?.id} className="p-[20px] rounded-[20px] flex itemscenter gap-x-2 bg-white">
-                        <BookIcon />
+                        <span>
+                            <BookIcon />
+                        </span>
 
                         <p className="text-neutral-04 text-sm font-medium flex gap-2 itemscenter">
                             <span className="flex itemscenter min-w-fit font-semibold"> Ans {i + 1}.</span>
