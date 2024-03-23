@@ -214,7 +214,7 @@ const QuestionsTab = ({ authToken }) => {
 
             <FormProvider {...methodsEditing}>
                 <form
-                    className="flex flex-col gap-y-8 w-full"
+                    className="flex flex-col gap-y-6 w-full"
                     onSubmit={methodsEditing.handleSubmit(onSubmitEditing)}
                 >
                     <ValidatedTextAreaField
